@@ -12,11 +12,11 @@
         <maven.version>3.5</maven.version>
         <start-class>com.sample.redis.MainApplication</start-class>
         <!--https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies-->
-        <spring-boot-dependencies.version>2.0.9.RELEASE</spring-boot-dependencies.version>
+        <spring-boot-dependencies.version>2.1.4.RELEASE</spring-boot-dependencies.version>
         <!-- Plugin versions -->
-        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
-        <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
-        <maven-dependency-plugin.version>3.0.2</maven-dependency-plugin.version>
+        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
+        <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
         <maven-enforcer-plugin.version>3.0.0-M2</maven-enforcer-plugin.version>
     </properties>
     <!-- -->
@@ -33,6 +33,27 @@
         </dependencies>
     </dependencyManagement>
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+        </dependency>
         <!--https://mvnrepository.com/artifact/org.projectlombok/lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
