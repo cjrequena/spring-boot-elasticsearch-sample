@@ -10,7 +10,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <maven.version>3.5</maven.version>
-        <start-class>com.sample.redis.MainApplication</start-class>
+        <start-class>com.sample.elasticsearch.MainApplication</start-class>
         <!--https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies-->
         <spring-boot-dependencies.version>2.1.4.RELEASE</spring-boot-dependencies.version>
         <!-- Plugin versions -->
