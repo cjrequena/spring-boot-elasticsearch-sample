@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sample.elasticsearch</groupId>
-    <artifactId>spring-boot-dependencies-elasticsearch-sample</artifactId>
+    <artifactId>spring-boot-elasticsearch-sample</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -71,9 +71,10 @@
             <groupId>org.elasticsearch</groupId>
             <artifactId>elasticsearch</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.elasticsearch.client/elasticsearch-rest-high-level-client -->
         <dependency>
-            <groupId>org.elasticsearch.restHighLevelClient</groupId>
-            <artifactId>elasticsearch-rest-high-level-restHighLevelClient</artifactId>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
         </dependency>
         <!--https://mvnrepository.com/artifact/org.projectlombok/lombok-->
         <dependency>
