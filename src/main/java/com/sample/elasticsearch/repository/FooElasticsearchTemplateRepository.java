@@ -40,11 +40,11 @@ public class FooElasticsearchTemplateRepository {
   }
 
   public void save(FooEntity entity) throws Exception {
-    IndexQuery userQuery = new IndexQuery();
-    userQuery.setIndexName(INDEX);
-    userQuery.setType(TYPE);
-    userQuery.setObject(entity);
-    log.info("User indexed: {}", elasticsearchTemplate.index(userQuery));
+    IndexQuery fooQuery = new IndexQuery();
+    fooQuery.setIndexName(INDEX);
+    fooQuery.setType(TYPE);
+    fooQuery.setObject(entity);
+    log.info("User indexed: {}", elasticsearchTemplate.index(fooQuery));
     elasticsearchTemplate.refresh(INDEX);
   }
 }

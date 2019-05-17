@@ -4,7 +4,9 @@ import com.sample.elasticsearch.MainApplication;
 import com.sample.elasticsearch.entity.FooEntity;
 import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
+import org.elasticsearch.action.index.IndexResponse;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -16,6 +18,8 @@ import org.springframework.stereotype.Repository;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.UUID;
+
+import static junit.framework.TestCase.assertTrue;
 
 /**
  * <p>
@@ -55,5 +59,21 @@ public class FooRestHighLevelClientRepositoryTest {
     entity.setMetaData1("MetaData1");
     entity.setMetaData2("MetaData2");
     fooRestHighLevelClientRepository.save(entity);
+  }
+
+  @Test
+  public void createIndexAndSave()throws Exception {
+    // given
+    String id = UUID.randomUUID().toString();
+    FooEntity entity = new FooEntity();
+    entity.setId(id);
+    entity.setName("FooName1");
+    entity.setMetaData1("MetaData1");
+    entity.setMetaData2("MetaData2");
+    fooRestHighLevelClientRepository.createIndexAndSave(entity);
+  }
+
+  @Test
+  public void createIndex() throws Exception{
   }
 }
